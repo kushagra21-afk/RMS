@@ -15,7 +15,7 @@ def About():
     Parameters -> None
     """
     # Change the path given here to the absolute path of the README file
-    with open(FULL_PATH_TO_THE_README_FILE) as file:
+    with open(r"C:\Users\Kush\Desktop\dbms\Railway-Management\Assets\Train_details.csv") as file:
         data = file.read()
         print(data)
 

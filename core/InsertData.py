@@ -15,17 +15,15 @@ def InsertDataTrain():
     Parameters -> None
     """
 
-    mn = con.connect(host="localhost",
-                     user=YOUR_USERNAME,
-                     password=YOUR_PASSWORD,
-                     database="railway")
+    mn = con.connect(host='localhost', user='root',
+                     database='railway', password='kush')
 
     cur = mn.cursor()
 
     # Iterating through all the values and insert's them in the table
     # Replace the path below with the absolute path of the file on your computer
     try:
-        with open(FULL_PATH_TO_THE_CSV_FILE) as csv_data:
+        with open(r"C:\Users\Kush\Desktop\dbms\Railway-Management\Assets\Train_details.csv") as csv_data:
             csv_reader = csv.reader(csv_data, delimiter=",")
             for row in csv_reader:
                 cur.execute(
